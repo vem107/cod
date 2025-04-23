@@ -1,3 +1,8 @@
+# Pip install langdetect
+# pip install numpy
+# pip install pandas
+# pip install nltk
+
 import numpy as np
 import pandas as pd
 import nltk
