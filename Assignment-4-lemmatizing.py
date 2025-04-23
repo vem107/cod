@@ -1,3 +1,7 @@
+# pip install nltk
+# nltk.download('wordnet') if not work by nltk 
+# nltk.download('omw-1.4') 
+
 import nltk
 from nltk.stem import WordNetLemmatizer
 
