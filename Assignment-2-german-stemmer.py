@@ -1,3 +1,6 @@
+# pip install nltk
+# nltk.download('punkt') if not work by pip install nltk
+
 # 1.Menu Driven code using one stemmer 
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("german")
