@@ -1,6 +1,7 @@
 # pip install TextBlob
 # pip install vaderSentiment
 
+# 1.code 
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -40,3 +41,39 @@ def analyze_text(text):
 if __name__ == "__main__":
     text = input("Enter the text for sentiment and emotion analysis: ")
     analyze_text(text)
+
+
+
+# 2. Code 
+from textblob import TextBlob
+from nrclex import NRCLex
+
+# Sentiment analysis using TextBlob
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    polarity = blob.sentiment.polarity
+    if polarity > 0:
+        return "Positive"
+    elif polarity < 0:
+        return "Negative"
+    else:
+        return "Neutral"
+
+# Emotion analysis using NRCLex
+def analyze_emotions(text):
+    emotion = NRCLex(text)
+    return emotion.raw_emotion_scores
+
+# Display results
+def analyze_text(text):
+    sentiment = analyze_sentiment(text)
+    emotions = analyze_emotions(text)
+
+    print("Sentiment:", sentiment)
+    print("Emotions Detected:", emotions)
+
+# Main
+if __name__ == "__main__":
+    text = input("Enter the text for sentiment and emotion analysis: ")
+    analyze_text(text)
+
